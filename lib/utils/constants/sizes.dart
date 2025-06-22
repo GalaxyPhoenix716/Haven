@@ -2,6 +2,7 @@ class HavenSizes {
   HavenSizes._();
 
   //Padding
+  static const double padXl = 30;
   static const double padL = 24;
   static const double padM = 20;
   static const double padS = 16;

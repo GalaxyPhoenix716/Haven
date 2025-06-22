@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:haven/utils/themes/device_themes/theme.dart';
 import 'package:haven/views/home/views/home_view.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Haven',
       themeMode: ThemeMode.system,
       theme: HavenAppTheme.lightTheme,

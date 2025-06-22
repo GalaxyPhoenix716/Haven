@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:haven/utils/constants/routes.dart';
+import 'package:haven/utils/helpers/helpers.dart';
 import 'package:iconsax/iconsax.dart';
 
 class CartCounterIcon extends StatelessWidget {
@@ -8,12 +10,13 @@ class CartCounterIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Icon(Iconsax.shopping_cart),
+        IconButton(onPressed: () => HavenHelpers.pushTo(HavenRoutes.cartRoute), icon: Icon(Iconsax.shopping_cart)),
         Positioned(
-          right: 0,
+          right: 7,
+          top: 7,
           child: Container(
-            width: 10,
-            height: 10,
+            width: 15,
+            height: 15,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(100),

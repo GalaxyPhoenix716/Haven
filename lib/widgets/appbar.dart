@@ -26,6 +26,7 @@ class HavenAppbar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
+        centerTitle: true,
         actionsIconTheme: HavenDeviceHelpers.isDarkMode(context)
             ? HavenAppBarTheme.darkAppBarTheme.actionsIconTheme
             : HavenAppBarTheme.lightAppBarTheme.actionsIconTheme,
@@ -43,7 +44,15 @@ class HavenAppbar extends StatelessWidget implements PreferredSizeWidget {
                       : HavenColors.blackAccent,
                 ),
               ),
-        title: Text(title ?? ''),
+        title: Text(
+          title ?? '',
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+            color: HavenDeviceHelpers.isDarkMode(context)
+                ? HavenColors.white
+                : HavenColors.blackAccent,
+            fontWeight: FontWeight.w900
+          ),
+        ),
         actions: actions,
       ),
     );
